@@ -1,5 +1,5 @@
 # PopularMoviesPart2
-This app is a Project for Udacity's Android Developer Nanodegree Program. With this app you can inform about Popular or Top Rated Movies from TheMovieDb.org API. 
+This app is a Project for Udacity's Android Developer Nanodegree Program. With this app you are able to inform about Popular or Top Rated Movies from TheMovieDb.org API. 
 
 Also, you can save your favorite movies to your favorite list.
 
