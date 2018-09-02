@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Main Layout - Linear Vertical -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_height="200dp"
+    android:orientation="vertical">
+
+    <!-- Video Title (TextView) -->
+    <TextView
+        android:id="@+id/video_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ellipsize="end"
+        android:gravity="center_horizontal"
+        android:maxLines="1"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="14sp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/video_image_thumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="12dp"
+            android:scaleType="centerCrop" />
+
+        <!-- ImageView for Play Icon (White Icon)-->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_play_circle_outline_white_36px"
+            android:contentDescription="@string/videos_label" />
+
+    </RelativeLayout>
+
+</LinearLayout>

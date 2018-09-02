@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- Nested Relative Layout for Reviews Icon & Text labels -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:paddingBottom="18dp"
+        android:paddingTop="18dp">
+
+        <!-- Reviews Icon Label -->
+        <ImageView
+            android:id="@+id/icon_review_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/reviews_label"
+            android:layout_toStartOf="@id/reviews_label"
+            android:contentDescription="@string/reviews_label"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:src="@drawable/ic_review_icon_white" />
+
+        <!-- Reviews Label -->
+        <TextView
+            android:id="@+id/reviews_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="@string/reviews_label"
+            android:textColor="@color/colorWhite"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <!-- Reviews Icon Label -->
+        <ImageView
+            android:id="@+id/icon_review_label_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/reviews_label"
+            android:layout_toRightOf="@id/reviews_label"
+            android:contentDescription="@string/reviews_label"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:src="@drawable/ic_review_icon_white" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorWhite" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/review_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- MainLayout Linear Layout Vertical -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- Poster Image Thumbnail -->
+    <ImageView
+        android:id="@+id/movie_poster_thumbnail_image"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:contentDescription="@string/poster_image_cd"
+        android:scaleType="fitXY" />
+
+    <!-- Nested Relative Layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <!-- Movie Title TextView -->
+        <TextView
+            android:id="@+id/movie_title_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:maxLines="1"
+            android:paddingBottom="4dp"
+            android:paddingTop="8dp"
+            android:textAppearance="@android:style/TextAppearance.Small"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            tools:text="Movie Title" />
+
+        <!-- Rating Bar -->
+        <RatingBar
+            android:id="@+id/user_rating_rb"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/movie_title_text_view"
+            android:layout_centerHorizontal="true"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:paddingBottom="4dp"
+            android:theme="@style/RatingBar"
+            tools:rating="7.2" />
+
+        <!-- Rating Value TextView-->
+        <TextView
+            android:id="@+id/user_rating_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_rating_rb"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="8dp"
+            android:textColor="@color/colorWhite"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>
+

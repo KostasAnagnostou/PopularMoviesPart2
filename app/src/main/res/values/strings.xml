@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Popular Movies</string>
+
+    <!-- Label for the Synopsis -->
+    <string name="synopsis_label">Synopsis</string>
+
+    <!-- Label for User Rating -->
+    <string name="user_rating_label">User Rating: </string>
+
+    <!-- Label for the Release Date inside the activity_detail.xml -->
+    <string name="released_date_label">Release Date: </string>
+
+    <!-- String for User Rating String Concatenation into the DetailActivity.java -->
+    <string name="rating_ten">/10</string>
+
+    <!-- Labels for for Popular and Top Rated Movies -->
+    <string name="popular_label">Popular Movies</string>
+    <string name="top_rated_label">Top Rated Movies</string>
+    <string name="favorites_label">Favorite Movies</string>
+    <string name="videos_label">Videos </string>
+    <string name="reviews_label">Reviews </string>
+
+    <string name="favorite_movie_message">You have added %1$s to your Favorite List!</string>
+    <string name="delete_favorite_movie_message">You have removed %1$s from your Favorite List</string>
+    <!-- Dialog message to ask the user to confirm deleting the current movie [CHAR LIMIT=NONE] -->
+    <string name="insert_dialog_message">Add %1$s to your favorite list?</string>
+    <!-- Dialog button text for the option to confirm deleting the current movie [CHAR LIMIT=20] -->
+    <string name="insert">Add</string>
+
+    <!-- Dialog message to ask the user to confirm deleting the current movie [CHAR LIMIT=NONE] -->
+    <string name="delete_dialog_message">Remove %1$s from your favorite list?</string>
+    <!-- Dialog button text for the option to confirm deleting the current movie [CHAR LIMIT=20] -->
+    <string name="delete">Remove</string>
+    <!-- Dialog button text for the option to cancel insertion/deletion of the current Movie -->
+    <string name="cancel">Cancel</string>
+
+    <!-- Messages for No Results and No Internet Connection -->
+    <string name="no_favorite_movies">Your Favorite List is empty! Add movies now from popular or top rated category!!</string>
+    <string name="no_internet">No Internet Connection. Check your Internet and try again&#8230;</string>
+
+    <!-- Image Content Description -->
+    <string name="poster_image_cd">Movie Poster Image Thumbnail</string>
+    <string name="favorite_no_image_icon">Your Favorite List is Empty Icon</string>
+
+</resources>

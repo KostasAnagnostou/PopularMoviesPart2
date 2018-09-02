@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?><!-- ScrollView Vertical -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- Main Layout LinerLayout Horizontal -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="true"
+        android:orientation="horizontal">
+
+        <!-- Nested LinearLayout Vertical - 1st Column -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:background="@color/colorWhite"
+            android:orientation="vertical">
+
+            <!-- Nested Relative Layout -->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary">
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fab_favorite_movie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="16dp"
+                    android:src="@drawable/ic_no_favorite_fab_24px"
+                    app:backgroundTint="@color/colorFAB" />
+
+                <!-- Synopsis Label -->
+                <TextView
+                    android:id="@+id/favorite_synopsis_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:text="@string/synopsis_label"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="26sp" />
+
+                <!-- Synopsis Text -->
+                <TextView
+                    android:id="@+id/favorite_synopsis_detail_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/favorite_synopsis_label"
+                    android:background="@color/colorWhite"
+                    android:padding="12dp"
+                    android:textSize="16sp" />
+
+                <!-- Rating Bar -->
+                <RatingBar
+                    android:id="@+id/favorite_detail_rating_bar"
+                    style="?android:attr/ratingBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/favorite_synopsis_detail_tv"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:theme="@style/RatingBar" />
+
+                <!-- User Rating Label -->
+                <TextView
+                    android:id="@+id/favorite_user_rating_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/favorite_detail_rating_bar"
+                    android:layout_gravity="center"
+                    android:paddingEnd="4dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="4dp"
+                    android:paddingStart="16dp"
+                    android:text="@string/user_rating_label"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="12sp" />
+
+                <!-- User Rating Value -->
+                <TextView
+                    android:id="@+id/favorite_user_rating_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/favorite_detail_rating_bar"
+                    android:layout_gravity="center"
+                    android:layout_toEndOf="@id/favorite_user_rating_label"
+                    android:layout_toRightOf="@id/favorite_user_rating_label"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="12sp" />
+
+                <!-- Released Date Label -->
+                <TextView
+                    android:id="@+id/favorite_release_date_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/favorite_user_rating_tv"
+                    android:gravity="center"
+                    android:paddingBottom="4dp"
+                    android:paddingEnd="4dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="4dp"
+                    android:paddingStart="16dp"
+                    android:text="@string/released_date_label"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="12sp" />
+
+                <!-- Released Date Value -->
+                <TextView
+                    android:id="@+id/favorite_release_date_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/favorite_user_rating_tv"
+                    android:layout_toEndOf="@id/favorite_release_date_label"
+                    android:layout_toRightOf="@id/favorite_release_date_label"
+                    android:paddingBottom="4dp"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!-- Movie Poster Image - 2nd Colum-->
+        <ImageView
+            android:id="@+id/favorite_poster_image_detail"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:contentDescription="@string/poster_image_cd"
+            android:scaleType="fitXY" />
+    </LinearLayout>
+</ScrollView>

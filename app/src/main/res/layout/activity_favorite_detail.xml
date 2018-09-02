@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Main Layout - Linear Layout Vertical -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_favorite_movie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="16dp"
+                android:src="@drawable/ic_no_favorite_fab_24px"
+                app:backgroundTint="@color/colorFAB"
+                app:elevation="12dp" />
+
+            <!-- Movie Poster Image-->
+            <ImageView
+                android:id="@+id/favorite_poster_image_detail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/poster_image_cd"
+                android:scaleType="fitXY" />
+        </RelativeLayout>
+
+        <!-- Nested LinearLayout Vertical - Container for Rating -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical"
+            android:padding="6dp">
+
+            <!-- Rating Bar -->
+            <RatingBar
+                android:id="@+id/favorite_detail_rating_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:theme="@style/RatingBar" />
+
+            <!-- Nested LinearLayout Horizontal for User Rating Label & Text -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorWhite"
+                android:orientation="horizontal">
+
+                <!-- User Rating Label -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="@string/user_rating_label"
+                    android:textSize="20sp" />
+
+                <!-- User Rating Value -->
+                <TextView
+                    android:id="@+id/favorite_user_rating_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:paddingEnd="4dp"
+                    android:paddingLeft="4dp"
+                    android:paddingStart="4dp"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Synopsis Label -->
+        <TextView
+            android:id="@+id/favorite_synopsis_label"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:paddingBottom="12dp"
+            android:text="@string/synopsis_label"
+            android:textColor="@color/colorWhite"
+            android:textSize="26sp" />
+
+        <!-- Synopsis Text -->
+        <TextView
+            android:id="@+id/favorite_synopsis_detail_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="12dp"
+            android:textSize="18sp" />
+
+        <!-- Nested LinearLayout Horizontal- container for Released date -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <!-- Released Date Label -->
+            <TextView
+                android:id="@+id/favorite_release_date_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:gravity="end"
+                android:padding="16dp"
+                android:text="@string/released_date_label"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp" />
+
+            <!-- Released Date Value -->
+            <TextView
+                android:id="@+id/favorite_release_date_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingStart="8dp"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
